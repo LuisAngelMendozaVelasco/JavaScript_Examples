@@ -1,514 +1,138 @@
 <html>
     <head>
         <title>JavaScript Examples</title>
+
+        <script>
+            function examplesList(topic, numberExamples) {
+                var txt = "";
+                txt +=  '<h2>' + topic + '</h2>\n' + 
+                        '<details>\n' + 
+                            '<summary>Examples</summary>\n';
+
+                for (var i = 1; i <= numberExamples; i++) {
+                    txt += '<li type="square"><a href="./' + topic.replace(/\s/g, "") + '/Example_' + i + '.html">Example'+ i + '</a></li>\n';
+                }
+
+                txt += '</details>\n';
+                document.getElementById(topic).innerHTML = txt;
+            }
+        </script>  
     </head>
     <body>  
-        <h1><center>JavaScript Examples</Center></h1>
+        <h1 style="text-align: center;">JavaScript Examples</h1>
 
-        <h2>What can JavaScript do?</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./WhatCanJavaScriptDo/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./WhatCanJavaScriptDo/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./WhatCanJavaScriptDo/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./WhatCanJavaScriptDo/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./WhatCanJavaScriptDo/Example_5.html">Example 5</a></li>
-        </details>
+        <p id="What Can JavaScript Do"></p>
+        <script>examplesList('What Can JavaScript Do', 5);</script>
 
-        <h2>Where to Insert JavaScript?</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./WhereToInsertJavaScript/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./WhereToInsertJavaScript/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./WhereToInsertJavaScript/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./WhereToInsertJavaScript/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./WhereToInsertJavaScript/Example_5.html">Example 5</a></li>
-        </details>
+        <p id="Where To Insert JavaScript"></p>
+        <script>examplesList('Where To Insert JavaScript', 5);</script>
 
-        <h2>JavaScript Output</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptOutput/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptOutput/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptOutput/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptOutput/Example_4.html">Example 4</a></li>
-        </details>
+        <p id="JavaScript Output"></p>
+        <script>examplesList('JavaScript Output', 4);</script>
 
-        <h2>JavaScript Syntax</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptSyntax/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptSyntax/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptSyntax/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptSyntax/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptSyntax/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptSyntax/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptSyntax/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptSyntax/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptSyntax/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptSyntax/Example_10.html">Example 10</a></li>
-            <li type="square"><a href="./JavaScriptSyntax/Example_11.html">Example 11</a></li>
-            <li type="square"><a href="./JavaScriptSyntax/Example_12.html">Example 12</a></li>
-        </details>
+        <p id="JavaScript Syntax"></p>
+        <script>examplesList('JavaScript Syntax', 12);</script>
 
-        <h2>JavaScript Statements</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptStatements/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptStatements/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptStatements/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptStatements/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptStatements/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptStatements/Example_6.html">Example 6</a></li>
-        </details>
+        <p id="JavaScript Statements"></p>
+        <script>examplesList('JavaScript Statements', 6);</script>
 
-        <h2>JavaScript Comments</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptComments/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptComments/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptComments/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptComments/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptComments/Example_5.html">Example 5</a></li>
-        </details>
+        <p id="JavaScript Comments"></p>
+        <script>examplesList('JavaScript Comments', 5);</script>
 
-        <h2>JavaScript Variables</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptVariables/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptVariables/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptVariables/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptVariables/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptVariables/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptVariables/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptVariables/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptVariables/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptVariables/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptVariables/Example_10.html">Example 10</a></li>
-            <li type="square"><a href="./JavaScriptVariables/Example_11.html">Example 11</a></li>
-        </details>
+        <p id="JavaScript Variables"></p>
+        <script>examplesList('JavaScript Variables', 11);</script>
 
-        <h2>JavaScript Arithmetic</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptArithmetic/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptArithmetic/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptArithmetic/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptArithmetic/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptArithmetic/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptArithmetic/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptArithmetic/Example_7.html">Example 7</a></li>
-        </details>
+        <p id="JavaScript Arithmetic"></p>
+        <script>examplesList('JavaScript Arithmetic', 7);</script>
 
-        <h2>JavaScript Assignment</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptAssignment/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptAssignment/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptAssignment/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptAssignment/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptAssignment/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptAssignment/Example_6.html">Example 6</a></li>
-        </details>
+        <p id="JavaScript Assignment"></p>
+        <script>examplesList('JavaScript Assignment', 6);</script>
 
-        <h2>JavaScript String Concatenation</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptStringConcatenation/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptStringConcatenation/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptStringConcatenation/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptStringConcatenation/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptStringConcatenation/Example_5.html">Example 5</a></li>
-        </details>
+        <p id="JavaScript String Concatenation"></p>
+        <script>examplesList('JavaScript String Concatenation', 5);</script>
 
-        <h2>JavaScript Data Types</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptDataTypes/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptDataTypes/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptDataTypes/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptDataTypes/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptDataTypes/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptDataTypes/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptDataTypes/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptDataTypes/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptDataTypes/Example_9.html">Example 9</a></li>
-        </details>
+        <p id="JavaScript Data Types"></p>
+        <script>examplesList('JavaScript Data Types', 9);</script>
 
-        <h2>JavaScript Objects</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptObjects/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_10.html">Example 10</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_11.html">Example 11</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_12.html">Example 12</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_13.html">Example 13</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_14.html">Example 14</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_15.html">Example 15</a></li>
-            <li type="square"><a href="./JavaScriptObjects/Example_16.html">Example 16</a></li>
-        </details>
+        <p id="JavaScript Objects"></p>
+        <script>examplesList('JavaScript Objects', 16);</script>
 
-        <h2>JavaScript Functions</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptFunctions/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptFunctions/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptFunctions/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptFunctions/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptFunctions/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptFunctions/Example_6.html">Example 6</a></li>
-        </details>
+        <p id="JavaScript Functions"></p>
+        <script>examplesList('JavaScript Functions', 6);</script>
 
-        <h2>JavaScript Events</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptEvents/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptEvents/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptEvents/Example_3.html">Example 3</a></li>
-        </details>
+        <p id="JavaScript Events"></p>
+        <script>examplesList('JavaScript Events', 3);</script>
 
-        <h2>JavaScript Strings</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptStrings/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptStrings/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptStrings/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptStrings/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptStrings/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptStrings/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptStrings/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptStrings/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptStrings/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptStrings/Example_10.html">Example 10</a></li>
-            <li type="square"><a href="./JavaScriptStrings/Example_11.html">Example 11</a></li>
-            <li type="square"><a href="./JavaScriptStrings/Example_12.html">Example 12</a></li>
-        </details>
+        <p id="JavaScript Strings"></p>
+        <script>examplesList('JavaScript Strings', 12);</script>
 
-        <h2>JavaScript Numbers</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptNumbers/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_10.html">Example 10</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_11.html">Example 11</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_12.html">Example 12</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_13.html">Example 13</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_14.html">Example 14</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_15.html">Example 15</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_16.html">Example 16</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_17.html">Example 17</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_18.html">Example 18</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_19.html">Example 19</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_20.html">Example 20</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_21.html">Example 21</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_22.html">Example 22</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_23.html">Example 23</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_24.html">Example 24</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_25.html">Example 25</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_26.html">Example 26</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_27.html">Example 27</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_28.html">Example 28</a></li>
-            <li type="square"><a href="./JavaScriptNumbers/Example_29.html">Example 29</a></li>
-        </details>
+        <p id="JavaScript Numbers"></p>
+        <script>examplesList('JavaScript Numbers', 29);</script>
 
-        <h2>JavaScript Number Methods</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_10.html">Example 10</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_11.html">Example 11</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_12.html">Example 12</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_13.html">Example 13</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_14.html">Example 14</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_15.html">Example 15</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_16.html">Example 16</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_17.html">Example 17</a></li>
-            <li type="square"><a href="./JavaScriptNumberMethods/Example_18.html">Example 18</a></li>
-        </details>
-        
-        <h2>JavaScript Maths</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptMaths/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptMaths/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptMaths/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptMaths/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptMaths/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptMaths/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptMaths/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptMaths/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptMaths/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptMaths/Example_10.html">Example 10</a></li>
-            <li type="square"><a href="./JavaScriptMaths/Example_11.html">Example 11</a></li>
-            <li type="square"><a href="./JavaScriptMaths/Example_12.html">Example 12</a></li>
-        </details>
+        <p id="JavaScript Number Methods"></p>
+        <script>examplesList('JavaScript Number Methods', 18);</script>
+   
+        <p id="JavaScript Maths"></p>
+        <script>examplesList('JavaScript Maths', 12);</script>
 
-        <h2>JavaScript Random</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptRandom/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptRandom/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptRandom/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptRandom/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptRandom/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptRandom/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptRandom/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptRandom/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptRandom/Example_9.html">Example 9</a></li>
-        </details>
+        <p id="JavaScript Random"></p>
+        <script>examplesList('JavaScript Random', 9);</script>
 
-        <h2>JavaScript Dates</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptDates/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptDates/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptDates/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptDates/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptDates/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptDates/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptDates/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptDates/Example_8.html">Example 8</a></li>
-        </details>
+        <p id="JavaScript Dates"></p>
+        <script>examplesList('JavaScript Dates', 8);</script>
 
-        <h2>JavaScript Arrays</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptArrays/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptArrays/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptArrays/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptArrays/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptArrays/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptArrays/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptArrays/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptArrays/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptArrays/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptArrays/Example_10.html">Example 10</a></li>
-            <li type="square"><a href="./JavaScriptArrays/Example_11.html">Example 11</a></li>
-        </details>
+        <p id="JavaScript Arrays"></p>
+        <script>examplesList('JavaScript Arrays', 11);</script>
 
-        <h2>JavaScript Array Methods</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptArrayMethods/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptArrayMethods/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptArrayMethods/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptArrayMethods/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptArrayMethods/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptArrayMethods/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptArrayMethods/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptArrayMethods/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptArrayMethods/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptArrayMethods/Example_10.html">Example 10</a></li>
-        </details>
+        <p id="JavaScript Array Methods"></p>
+        <script>examplesList('JavaScript Array Methods', 10);</script>
 
-        <h2>JavaScript Array Sort</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptArraySort/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_10.html">Example 10</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_11.html">Example 11</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_12.html">Example 12</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_13.html">Example 13</a></li>
-            <li type="square"><a href="./JavaScriptArraySort/Example_14.html">Example 14</a></li>
-        </details>
+        <p id="JavaScript Array Sort"></p>
+        <script>examplesList('JavaScript Array Sort', 14);</script>
 
-        <h2>JavaScript Array Iteration</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptArrayIteration/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptArrayIteration/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptArrayIteration/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptArrayIteration/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptArrayIteration/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptArrayIteration/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptArrayIteration/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptArrayIteration/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptArrayIteration/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptArrayIteration/Example_10.html">Example 10</a></li>
-            <li type="square"><a href="./JavaScriptArrayIteration/Example_11.html">Example 11</a></li>
-        </details>
+        <p id="JavaScript Array Iteration"></p>
+        <script>examplesList('JavaScript Array Iteration', 11);</script>
 
-        <h2>JavaScript Type Conversion</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptTypeConversion/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptTypeConversion/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptTypeConversion/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptTypeConversion/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptTypeConversion/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptTypeConversion/Example_6.html">Example 6</a></li>
-        </details>
+        <p id="JavaScript Type Conversion"></p>
+        <script>examplesList('JavaScript Type Conversion', 6);</script>
 
-        <h2>JavaScript Booleans</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptBooleans/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptBooleans/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptBooleans/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptBooleans/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptBooleans/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptBooleans/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptBooleans/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptBooleans/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptBooleans/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptBooleans/Example_10.html">Example 10</a></li>
-        </details>
+        <p id="JavaScript Booleans"></p>
+        <script>examplesList('JavaScript Booleans', 10);</script>
 
-        <h2>JavaScript Comparisons</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptComparisons/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptComparisons/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptComparisons/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptComparisons/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptComparisons/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptComparisons/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptComparisons/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptComparisons/Example_8.html">Example 8</a></li>
-            <li type="square"><a href="./JavaScriptComparisons/Example_9.html">Example 9</a></li>
-            <li type="square"><a href="./JavaScriptComparisons/Example_10.html">Example 10</a></li>
-            <li type="square"><a href="./JavaScriptComparisons/Example_11.html">Example 11</a></li>
-        </details>
+        <p id="JavaScript Comparisons"></p>
+        <script>examplesList('JavaScript Comparisons', 11);</script>
 
-        <h2>JavaScript Conditionals</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptConditionals/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptConditionals/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptConditionals/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptConditionals/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptConditionals/Example_5.html">Example 5</a></li>
-        </details>
+        <p id="JavaScript Conditionals"></p>
+        <script>examplesList('JavaScript Conditionals', 5);</script>
 
-        <h2>JavaScript Loops</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptLoops/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptLoops/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptLoops/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JavaScriptLoops/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JavaScriptLoops/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JavaScriptLoops/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JavaScriptLoops/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JavaScriptLoops/Example_8.html">Example 8</a></li>
-        </details>
+        <p id="JavaScript Loops"></p>
+        <script>examplesList('JavaScript Loops', 8);</script>
 
-        <h2>JavaScript Error Handling</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptErrorHandling/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptErrorHandling/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JavaScriptErrorHandling/Example_3.html">Example 3</a></li>
-        </details>
+        <p id="JavaScript Error Handling"></p>
+        <script>examplesList('JavaScript Error Handling', 3);</script>
 
-        <h2>JavaScript Regular Expressions</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JavaScriptRegularExpressions/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JavaScriptRegularExpressions/Example_2.html">Example 2</a></li>
-        </details>
+        <p id="JavaScript Regular Expressions"></p>
+        <script>examplesList('JavaScript Regular Expressions', 2);</script>
 
-        <h2>JSON Objects</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JSONObjects/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JSONObjects/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JSONObjects/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JSONObjects/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JSONObjects/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JSONObjects/Example_6.html">Example 6</a></li>
-            <li type="square"><a href="./JSONObjects/Example_7.html">Example 7</a></li>
-            <li type="square"><a href="./JSONObjects/Example_8.html">Example 8</a></li>
-        </details>
+        <p id="JSON Objects"></p>
+        <script>examplesList('JSON Objects', 8);</script>
 
-        <h2>JSON Arrays</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JSONArrays/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JSONArrays/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JSONArrays/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JSONArrays/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JSONArrays/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JSONArrays/Example_6.html">Example 6</a></li>
-        </details>
+        <p id="JSON Arrays"></p>
+        <script>examplesList('JSON Arrays', 6);</script>
 
-        <h2>JSON Parse</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JSONParse/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JSONParse/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JSONParse/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JSONParse/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JSONParse/Example_5.html">Example 5</a></li>
-            <li type="square"><a href="./JSONParse/Example_6.html">Example 6</a></li>
-        </details>
+        <p id="JSON Parse"></p>
+        <script>examplesList('JSON Parse', 6);</script>
 
-        <h2>JSON Stringify</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JSONStringify/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JSONStringify/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JSONStringify/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JSONStringify/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JSONStringify/Example_5.html">Example 5</a></li>
-        </details>
+        <p id="JSON Stringify"></p>
+        <script>examplesList('JSON Stringify', 5);</script>
 
-        <h2>JSON PHP</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JSONPHP/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JSONPHP/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JSONPHP/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JSONPHP/Example_4.html">Example 4</a></li>
-            <li type="square"><a href="./JSONPHP/Example_5.html">Example 5</a></li>
-        </details>
+        <p id="JSON PHP"></p>
+        <script>examplesList('JSON PHP', 5);</script>
 
-        <h2>JSON HTML</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JSONHTML/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JSONHTML/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JSONHTML/Example_3.html">Example 3</a></li>
-        </details>
+        <p id="JSON HTML"></p>
+        <script>examplesList('JSON HTML', 3);</script>
 
-        <h2>JSON JSONP</h2>
-        <details>
-            <summary>Examples</summary>
-            <li type="square"><a href="./JSONJSONP/Example_1.html">Example 1</a></li>
-            <li type="square"><a href="./JSONJSONP/Example_2.html">Example 2</a></li>
-            <li type="square"><a href="./JSONJSONP/Example_3.html">Example 3</a></li>
-            <li type="square"><a href="./JSONJSONP/Example_4.html">Example 4</a></li>
-        </details>
+        <p id="JSON JSONP"></p>
+        <script>examplesList('JSON JSONP', 4);</script>
     </body>
 </html>
